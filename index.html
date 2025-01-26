@@ -156,10 +156,10 @@
     <source src="Lauv - I Like Me Better [Official Video].mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-    <!-- <audio id="background-music2" loop>
+    <audio id="background-music2" loop>
     <source src="ჩუბინა.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-  </audio>-->
+  </audio>
 
   <script>
     // Create Rain Effect
@@ -187,6 +187,7 @@
 
     // Handle Yes Button
     document.getElementById('yes-button').addEventListener('click', () => {
+          document.getElementById('background-music').play();
       document.body.style.background = 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)';
       flower.style.display = 'block';
       setTimeout(() => {
@@ -214,7 +215,7 @@
         setTimeout(() => {
           brokenHeart.remove();
         }, 2000);
-       /* document.getElementById('background-music2').play();*/
+        document.getElementById('background-music2').play();
       }
       setTimeout(() => {
         alert('Ok! I will never disturb you. 💔');
