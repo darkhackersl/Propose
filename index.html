@@ -111,6 +111,7 @@
       from { transform: translateY(-100%); }
       to { transform: translateY(100%); }
     }
+
     /* Heart Animation */
     .broken-heart {
       position: absolute;
@@ -138,7 +139,7 @@
   </div>
 
   <!-- SVG Flower -->
-   <svg class="flower" id="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <svg class="flower" id="flower" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
     <circle cx="100" cy="100" r="40" fill="pink" />
     <circle cx="60" cy="100" r="30" fill="red" />
     <circle cx="140" cy="100" r="30" fill="red" />
@@ -151,7 +152,7 @@
   <div class="rain" id="rain"></div>
 
   <!-- Background Music -->
-  <audio id="background-music" autoplay loop>
+  <audio id="background-music" loop>
     <source src="Lauv - I Like Me Better [Official Video].mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -182,6 +183,7 @@
           window.open('https://wa.me/94767096711?text=Hi%2C%20I%20want%20to%20send%20you%20a%20message!%20My%20Choice%20Yes!', '_blank');
         }
       }, 2000);
+      document.getElementById('background-music').play(); // Play music when 'Yes' is clicked
     });
 
     // Handle No Button
