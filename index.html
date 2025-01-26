@@ -168,6 +168,14 @@
       rainContainer.appendChild(drop);
     }
 
+    // Play music as soon as the page is ready
+    window.addEventListener('load', () => {
+      const backgroundMusic = document.getElementById('background-music');
+      backgroundMusic.play().catch(error => {
+        console.log('Autoplay was blocked by the browser, waiting for user interaction.');
+      });
+    });
+
     // Show Proposal after Intro
     setTimeout(() => {
       document.getElementById('proposal').style.display = 'block';
@@ -183,7 +191,6 @@
           window.open('https://wa.me/94767096711?text=Hi%2C%20I%20want%20to%20send%20you%20a%20message!%20My%20Choice%20Yes!', '_blank');
         }
       }, 2000);
-      document.getElementById('background-music').play(); // Play music when 'Yes' is clicked
     });
 
     // Handle No Button
