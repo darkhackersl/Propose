@@ -156,6 +156,10 @@
     <source src="Lauv - I Like Me Better [Official Video].mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+   <audio id="background-music2" loop>
+    <source src="ჩუბინა.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <script>
     // Create Rain Effect
@@ -210,6 +214,7 @@
         setTimeout(() => {
           brokenHeart.remove();
         }, 2000);
+        document.getElementById('background-music2').play();
       }
       setTimeout(() => {
         alert('Ok! I will never disturb you. 💔');
